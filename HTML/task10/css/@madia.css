@@ -1,0 +1,238 @@
+body{
+    background-color: #fff;
+    margin: 0;
+}
+ul{
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style: none;
+    margin: 0;
+}
+p{
+    margin: 0;
+}
+
+/****************/
+.width-max{
+    width: 100%;
+}
+.width-1280{
+   width: 100%;
+   max-width: 1140px;
+   margin: 0 auto;
+}
+/******************/
+.display-flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.flex-wrap-reverse{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*****************/
+
+.float-l{
+    float: left;
+}
+.float-r{
+    float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body{
+    background-color: rgb(201, 181, 181);
+    margin: 0;
+}
+ul{
+    padding: 0;
+    margin: 0;
+}
+
+
+li { list-style:none; 
+    margin: 0;
+
+
+}
+p{margin: 0;}/***/
+
+
+.padding-left{padding-left:10px;}
+
+.margin-left-auto{margin-left:auto;}
+
+.margin-0{margin: 0;}
+
+
+
+.line-height-40{
+    line-height: 40px;
+}
+
+.text{color:#fff;}
+
+.relative{ 
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+
+
+
+.float-left{
+    float: left;
+    position: relative;
+}
+.float-right{
+    float: right;
+    position: relative;
+}
+
+
+.display-in{
+    display:inline-block;
+}
+.display-b{
+    display:block;
+}
+
+:hover{
+    z-index: 999;
+}
+
+:link{}
+:visited{}
+:hover{}
+:active{}
+:focus{}
+
+
+
+-moz-box-shadow:0 0 10px #dad2d2;
+-webkit-box-shadow:0 0 10px #dad2d2;
+box-shadow:0 0 10px #dad2d2; 
+
+@media (max-width: 575.98px) { ... }
+@media (min-width: 576px) and (max-width: 767.98px) { ... }
+@media (min-width: 768px) and (max-width: 991.98px) { ... }
+@media (min-width: 992px) and (max-width: 1199.98px) { ... }
+@media (min-width: 1200px) { ... }
+
+
+
+
+/***************/div>label{
+    position: relative;
+    margin-right: 34px;
+}
+div>label::before{
+    display: inline-block;
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid rgb(219, 219, 219);
+    margin-right: 6px;
+    vertical-align: bottom;
+}
+div>input:checked+label::before{
+    background-color: rgb(239, 66, 56);
+}
+div>input:checked+label::after{
+    display: inline-block;
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    position: absolute;
+    left: 6px;
+    bottom: 6px;
+    background-color: white;
+}
+/*****************/
+div{
+  
+    width: 200px;  /*用div的样式代替select的样式*/
+    height: 40px;
+    border-radius: 5px;   
+    box-shadow: 0 0 5px #ccc; /*盒子阴影修饰作用,自己随意*/
+    position: relative;
+}
+select{
+   
+    border: none; /*清除select的边框样式*/  
+    outline: none;/*/清除select聚焦时候的边框颜色*/   
+    width: 100%;/*将select的宽高等于div的宽高*/
+    height: 40px;
+    line-height: 40px;
+    
+    appearance: none;/*隐藏select的下拉图标*/
+    -webkit-appearance: none;
+    -moz-appearance: none; 
+    padding-left: 60px;  /*通过padding-left的值让文字居中*/
+}
+
+div:after{/*使用伪类给select添加自己想用的图标*/
+    content: "";
+    width: 14px;
+    height: 8px;
+    background: url(img/xiala.png) no-repeat center;  
+    position: absolute;/*通过定位将图标放在合适的位置*/
+    right: 20px;
+    top: 45%; 
+    pointer-events: none;  /*给自定义的图标实现点击下来功能*/
+}
+--------------------- 
+作者：暖夏随园 
+来源：CSDN 
+原文：https://blog.csdn.net/nuanxiasuiyuan/article/details/75663521 
+版权声明：本文为博主原创文章，转载请附上博文链接！
+
+
+select+div>div{
+    height: 0;
+    width: 0;
+    border-width: 10px;
+    border-style: solid;
+    border-bottom-width: 0;
+    border-left-color:  #1d7ad9;
+    border-right-color: #1d7ad9;
+    border-top-width: 10px;
+    border-top-color: #fff;
+    display: inline-block;
+}

@@ -1,0 +1,122 @@
+
+/**css重置样式**/
+body{margin:0;padding:0}
+a{text-decoration:none}
+a{display: inline-block;}
+// *li{list-style:none}
+p{margin-top: 0;margin-bottom: 0;}
+img{cursor: pointer;}
+.d-b {display:block;}              /*块级元素*/
+.d-i-b {display:inline-block;}     /*行内块级元素*/
+.vertical-top {vertical-align: text-top}
+.vertical-middle {vertical-align: middle}
+
+
+.bgc-fff {background-color: #fff;}
+.bgc-fafafa {background-color: #fafafa;}//网页底色 
+.bgc-29b078 {background-color: #29b078;}//绿 导航  页脚  字体
+.bgc-f66f6f {background-color: #f66f6f;}//红
+.gbc-f5c97b {background-color: #f5c97b;}//暗-黄
+.bgc-fbb435 {background-color: #fbb435;}//和字体同色
+.bgc-f8fafb {background-color: #f8fafb;}//阴影-白
+.bgc-5fc0cd {background-color: #5fc0cd;} //蓝
+.bgc-55a8b3 {background-color: #55a8b3;}//阴影-蓝
+/*字体属性*/
+
+@mixin fts($font-size) {font-size: $font-size}
+.font-size18 {font-size: 18px;} //   
+.font-size16 {font-size: 16px;}
+.font-size14 {font-size: 14px;}//
+.font-size12 {font-size: 12px;}
+@mixin text-color($text-size) {color:$text-size;}
+.text-color-White {color: #fff;}
+.text-color-black {color: #000;}
+.text-color-Gray {color: #999;}//
+.text-color-Green {color:#29b078}//
+.text-color-Red {color:#f30d0d}
+.text-color {color:#ff5c00}
+
+/*文本属性*/
+.line-height-0 {line-height: 0px;}//
+.line-height-180 {line-height: 180px;}//
+.line-height-80 {line-height: 80px;}
+.line-height-70 {line-height: 70px;}//
+.line-height-60 {line-height: 60px;}
+.line-height-40 {line-height: 40px;}/*顶栏*/
+.line-height-20 {line-height: 20px;}
+.line-height-30 {line-height: 30px;}
+.font-weight-700 {font-weight: 700;}//加粗字体    //
+
+.text-spacing-1 {letter-spacing:1px} /*字体间距*/
+.justify {text-align: justify;}/*字体两端对齐*/
+.text-center {text-align: center}/*居中*/
+.text-left {text-align: left}/*居左*/ 
+.text-right {text-align: right}/*居右*/            //
+/**高度**/
+.height-nav {height: 100px;}//导航栏高度
+.Carousel {height: 810px;} //轮播图
+.footer {height: 200px;}// 页脚总高度高
+/**位置属性**/
+.padding-0 {padding: 0;}
+.padding-top-80 {padding-top: 80px}
+.padding-top-60 {padding-top: 60px}//
+.padding-top-30 {padding-top: 30px}
+.padding-top-20 {padding-top: 20px}
+.padding-top-10 {padding-top: 10px}
+
+.padding-left-30 {padding-left: 30px}
+.padding-left-25 {padding-left: 25px}
+.padding-left-20 {padding-left: 20px}//
+.padding-left-10 {padding-left: 10px}
+
+.padding-bottom-30 {padding-bottom: 30px}
+.padding-bottom-80 {padding-bottom: 80px}
+
+.padding-right-30 {padding-right: 30px}
+.padding-right-20 {padding-right: 20px}
+.padding-right-10 {padding-right: 10px}//
+
+.margin-0 {margin: 0;}
+.margin-top-100 {margin-top: 100px;}//
+.margin-top-80 {margin-top: 80px;}//
+.margin-top-40 {margin-top: 40px;}
+.margin-top-20 {margin-top: 20px;}//
+
+.margin-top-0 {margin-top: 0;}
+
+.margin-right-10 {margin-right: 10px;}
+.margin-right-30 {margin-right: 30px;}
+
+.margin-bottom-30 {margin-bottom:30px}//
+.margin-bottom-20 {margin-bottom:20px}
+.margin-bottom-30 {margin-bottom:30px}
+.margin-bottom-50 {margin-bottom:50px}//
+
+.margin-left-20 {margin-left: 20px;}//
+.margin-left-10 {margin-left: 10px;}
+.margin-left-30 {margin-left: 30px;}
+
+/*高度*/
+.height-250px {height: 250px;}
+.height-180 {height: 180px;}//
+.height-150 {height: 150px;}
+.height-70 {height: 70px;}
+/*宽度*/
+.width-320 {min-width: 300px;width:320px;} 
+.width-160 {width: 160px;}
+.width-300 {width:300px;}
+.max-width-1200 {max-width: 1200px;}
+.max-width-1280 {max-width: 1280px;}
+
+/*/*******/
+//媒体查询
+// 超小型设备  手机纵向显示     (小于  576px)
+@media (max-width: 575.98px) {}
+// 小型设备    手机横向显示      (大于等于  576px)
+@media (min-width: 576px) and (max-width: 767.98px) {}
+//中型设备     平板电脑          (大于等于  768px)
+@media (min-width: 768px) and (max-width: 991.98px) {}
+// 大型设备    台式机            (大于等于  992px)
+@media (min-width: 992px) and (max-width: 1199.98px) {}
+// 超大设备    大型台式机        (大于等于 1200px)
+@media (min-width: 1200px) {}

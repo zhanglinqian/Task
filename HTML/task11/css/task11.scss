@@ -1,0 +1,94 @@
+$bgc-blue : #5fc0cd ;
+$bgc-White : #fff ;
+$bgc-Gray : #eff0f4;
+$fontcolor-white : #fff;
+$fontcolor-blue : #5fc0cd;
+$fontcolor-LightGray : #e5e8ea;
+$fontsize-16 : 16px;
+$fontsize-18 : 18px;
+$width : 768px;
+body {
+    background-color:$bgc-Gray;
+    margin : 0;
+}
+.content { 
+    width : 100%;
+    max-width : $width;
+    margin : 0 auto ;
+}
+.nav-top {
+    color : $fontcolor-white;
+    font-size : $fontsize-18;
+    padding : 0 {
+           left : 10px;
+           right : 10px;
+                 }
+    line-height: 44px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background-color : $bgc-blue;
+          button{
+              padding : 0 ;
+              border : none;
+              color : $fontcolor-white;
+              font-size : $fontsize-16;
+              background-color : $bgc-blue;            
+              outline:none;/*！清楚点击效果*/
+              cursor: pointer;
+          }
+          p {
+              margin : 0;
+          }
+}
+.content-top { 
+      height : 50px;
+      margin : 0 {
+          top : 5px;
+          bottom : 5px;
+      }
+      display : flex;
+      justify-content : flex-start;
+      align-items : center;
+      background-color : $bgc-White;
+      img {
+          height : 25px;
+          margin: {
+              left: 20px;
+              right: 20px;
+          }
+          flex-shrink: 0;
+      }
+      input { 
+          cursor: pointer;
+          color : $fontcolor-LightGray;
+          outline : none;
+          border : none {
+              left-style : solid;
+                   color : $bgc-Gray;
+                    width : 1px;                 
+                        }
+         font-size : $fontsize-16;
+         line-height : 30px;
+         padding-left : 5px;
+         flex-grow: 1;
+             }
+}
+.content-button {
+    outline : none ;
+    display : block ;
+    border : none;
+    width : 100%;
+    line-height: 60px;
+    background-color : $bgc-blue;
+    font-size : $fontsize-18;
+    color : $fontcolor-white;
+    margin : 30px auto 5px;
+    cursor: pointer;
+}
+.footer-a {
+    float : right;
+    font-size : $fontsize-16;
+    color : $fontcolor-blue;
+    cursor: pointer;
+}

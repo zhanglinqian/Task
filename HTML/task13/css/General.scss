@@ -1,0 +1,132 @@
+
+//背景色
+@mixin  bgc-5fc0cd {background-color: #5fc0cd;} //蓝
+
+@mixin bgc-55a8b3 {background-color: #55a8b3;}//阴影-蓝
+
+@mixin bgc-29bde0 {background-color: #29bde0;}
+
+@mixin bgc-fff {background-color: #fff;}
+
+@mixin bgc-f8fafb {background-color: #f8fafb;}//阴影-白
+
+@mixin bgc-fbb435 {background-color: #fbb435;}//和字体同色
+
+@mixin gbc-f5c97b {background-color: #f5c97b;}//暗-黄
+
+@mixin bgc-f66f6f {background-color: #f66f6f;}//红
+
+
+//字体
+@mixin fontcolor {color:#9a9a9a;}//灰色字体
+
+@mixin font-ffc865 {color: #ffc865;}
+
+@mixin font-18 {font-size: 18px;}
+
+@mixin font-16 {font-size: 16px;}
+
+@mixin font-15 {font-size: 15px;}
+
+@mixin font-14 {font-size: 14px;}
+
+@mixin font-13 {font-size: 13px;}
+
+@mixin font-12 {font-size: 12px;}
+
+@mixin font-10 {font-size: 10px;}
+
+@mixin font-weight {font-weight: 700;}//加粗字体
+
+//按钮  
+
+@mixin button-style ($color,$font-size,$line-height,$bg-color,$radius:5px){
+    cursor : pointer;
+    outline : none;      
+    border : none;
+    padding:0;
+    color:$color;
+    font-size: $font-size;
+    line-height : $line-height;
+    background-color : $bg-color;  
+    border-radius : $radius;
+    -moz-border-radius : $radius;
+    -webkit-border-radius : $radius;
+}
+
+//宽度
+@mixin width-full {
+    width:100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+
+@mixin width-fixed { 
+    width: 100%;
+    max-width : 768px;
+    margin:0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+
+//高度
+@mixin h-44 {height: 44px;}//导航高度
+
+//边框圆角
+@mixin border-radius($radius) {
+    border-radius : $radius;
+    -moz-border-radius : $radius;
+    -webkit-border-radius : $radius;
+}
+
+
+
+//弹性盒子
+@mixin flex-wrap {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+@mixin flex-wrap-left {
+    display:flex;
+    flex-wrap: wrap;
+    align-items:center;  
+}
+@mixin  flex-nowrap-end {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    align-items: center;
+    
+}
+@mixin nowrap {
+    display:flex;
+    flex-wrap:nowrap;
+    align-items:center;
+}
+@mixin flex-flex-direction {
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+}
+
+//多轴对齐
+@mixin align-content-space-between {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:center;
+    align-content:space-between;
+}
+
+//弹性盒子项目属性
+@mixin flex-item ($order:0,$flex-grow:0,$flex-shrink:1,$flex-basis:auto){
+    order:$order;
+    flex-grow:$flex-grow;
+    flex-shrink:$flex-shrink;
+    flex-basis:$flex-basis;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" class="bgc-fff">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>投票页</title>
+    <link rel="stylesheet" type="text/css" href="../css/general.css">
+    <link rel="stylesheet" type="text/css" href="../css/voting_page.css">
+</head>
+<body>
+    <!--导航-->
+    <div class="nav">
+        <div class="nav-content box-rgba">
+            <div class="triangle nav-left" id="fallback"></div>
+            <p class="margin-0">法官日志</p>
+            <div class="terminate nav-right" id="terminate"><div></div><div></div></div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="content bgc-29bde0">
+            <!--<div class="content-items">
+                <div>
+                    <div>
+                        <p>水民</p>
+                        <p>1号</p>
+                    </div>
+                    <div>
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="../image/刀.png" width="25px">
+                        <img src="" alt="">
+                    </div>
+                </div>
+            </div>-->
+            
+        </div>
+        <div class="footer bgc-29bde0">
+            <button type="button" id="but">开始游戏</button>
+        </div>
+    </div>
+
+<script src="../../../jquery-3.4.1/jquery-3.4.1.min.js"></script>
+<script>
+    var    myfallback = document.getElementById("fallback");       // 获取返回链接
+          myterminate = document.getElementById("terminate");     //关闭按钮      //没定义
+                mybut = document.getElementById("but");
+        myfallback.onclick = function() {
+            window.location.href = "../html/licensing.html";     // 返回链接
+        }
+            mybut.onclick = function() {
+            window.location.href = "../html/Judge_taiben.html";    //跳转到法官台本页
+        }
+    var myreordering = sessionStorage.getItem("myreordering");  //读取
+          reordering = JSON.parse(myreordering);              //重新转换为数组
+    var rgl = reordering.length;
+$(function () {               //  动态生成玩家
+    var identity = undefined;
+    for (var i = 0; i < rgl; i++) {
+        identity = reordering[i].name;
+        var box =   '<div class="content-items">' +
+                        '<div>' +
+                            '<div>' +
+                                '<p>' + identity + '</p>' +
+                                '<p>' + (i + 1) + '号' + '</p>' +
+                            '</div>' +
+                            '<div>' +
+                                '<img src="" width="25px">' +
+                            '</div>' +
+                        '</div>' +
+                    '</div>'
+        $('.content').append(box);    //   通过 append 添加盒子
+    };
+});
+</script>
+</body>
+</html>

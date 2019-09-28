@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .header {
+            position: relative;
+            background-image: url(../img/背景图.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+            width: 100%;
+            padding-top: 40%;
+        }
+
+        .header>img {
+            position: absolute;
+            top: 50%;
+            margin-top: -42.5px;
+            margin-left: 20px;
+        }
+
+        .header-nome {
+            width: 100px;
+            height: 45px;
+            margin-left: 10px;
+            line-height: 1.5;
+            position: absolute;
+            top:50%;
+            margin-top: -22.5px;
+            margin-left: 120px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            align-content: space-between;
+        }
+
+        .header-nome span:nth-child(1) {
+            font-size: 18px;
+            color: #fff;
+            order: 0;
+            flex-grow: 0;
+            flex-shrink: 0;
+            flex-basis: 60%;
+        }
+
+        .header-nome span:nth-child(2) {
+            text-align: right;
+            font-size: 14px;
+            color: #999;
+            color: #fff;
+            order: 0;
+            flex-grow: 0;
+            flex-shrink: 0;
+            flex-basis: 40%;
+        }
+
+        .header-nome img:nth-child(3) {
+            display: inline-block;
+        }
+        .header-nome span:nth-child(4) {
+            font-size: 12px;
+            color: #fff;
+}
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <img src="../img/头像.png" width="85px">
+        <div class="header-nome">
+            <span>高素雅</span>
+            <span>51岁</span>
+            <img src="../img/位置.png" width="9px" height="11.5px">
+            <span>北京.通州.果园</span>
+        </div>
+    </div>
+
+</body>
+
+</html>

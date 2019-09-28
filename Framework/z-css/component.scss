@@ -1,0 +1,176 @@
+@mixin header  {};//头
+@mixin content {};//内容
+@mixin footer {};//尾
+@mixin nav {};//导航
+@mixin subnav {};//子导航
+@mixin tab {}//标签页
+@mixin sidebar {};//侧栏
+@mixin wrapper {};//页面外围控制整体布局宽度
+@mixin left-right-center {};//左右中
+@mixin logo {};//标志
+@mixin main {};//zhuti
+@mixin menu {};//子菜单
+//背景色
+@mixin bgc($bgc) {background-color:$bgc;}
+//按钮 
+@mixin button-style ($color,$font-size,$line-height,$bg-color,$radius:5px){
+    cursor : pointer;
+    outline : none;      
+    border : none;
+    padding:0;
+    color:$color;
+    font-size: $font-size;
+    line-height : $line-height;
+    background-color : $bg-color;  
+    border-radius : $radius;
+    -moz-border-radius : $radius;
+    -webkit-border-radius : $radius;
+}
+//边框圆角
+@mixin border-radius($radius) {
+    border-radius : $radius;
+    -moz-border-radius : $radius;
+    -webkit-border-radius : $radius;
+}
+//圆形图案
+@mixin round($height,$width,$radius,$color) {
+    height: $height;
+    width: $width;
+    border-radius : $radius;
+    -moz-border-radius : $radius;
+    -webkit-border-radius : $radius;
+    background-color: $color;
+}
+//边框阴影
+//*h-shadow	必需的。水平阴影的位置。允许负值
+//*v-shadow	必需的。垂直阴影的位置。允许负值
+//*blur	    可选。模糊距离
+//*spread	可选。阴影的大小
+//*color  	可选。阴影的颜色。在CSS颜色值寻找颜色值的完整列表
+//*inset	    可选。从外层的阴影（开始时）改变阴影内侧阴影 
+
+
+ //水平阴影的位置//垂直阴影的位置//模糊距离//阴影的颜色
+@mixin box-shadow-Lack($h-shadow,$v-shadow,$blur,$color) { //常用版本
+    -webkit-box-shadow : $h-shadow $v-shadow $blur $color;   
+    -moz-box-shadow : $h-shadow $v-shadow $blur $color ;   
+    box-shadow : $h-shadow $v-shadow $blur $color ;        
+}
+@mixin box-shadow($h-shadow,$v-shadow,$blur,$spread,$color,$inset) {//完整版
+    -webkit-box-shadow : $h-shadow $v-shadow $blur $spread $color $inset ;
+    -moz-box-shadow : $h-shadow $v-shadow $blur $spread $color $inset ;
+    box-shadow : $h-shadow $v-shadow $blur $spread $color $inset ;
+}
+
+//自动宽度
+@mixin width-full {
+    min-height: 1px;
+    width:100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+}
+//固定宽度
+@mixin width-fixed {
+    min-height: 1px; 
+    width: 100%;
+    margin-left:auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+}
+//弹性盒子
+//  X轴左对齐-y轴居中-默认换行
+@mixin wrap-flex () {
+    display: flex;
+    flex-direction : row;
+    flex-wrap : wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+//  x轴左对齐-y轴居中-不换行
+@mixin no-flex () {
+    display: flex;
+    flex-direction : row;
+    flex-wrap : nowrap;
+    justify-content: flex-start; 
+    align-items: center;
+}
+//主轴方向
+//      row-           水平-起点在-左
+//      row-reverse    水平-起点在-右
+//      column         起点在上沿
+//      column-reverse 起点在下沿
+@mixin fdn ($row) {flex-direction:$row;}
+//项目换行
+//   nowrap       不换行
+//   wrap         换行-第一行在上
+//   wrap-reverse 换行-第一行在下
+@mixin f-p($wrap) {flex-wrap:$wrap;}
+//主轴上项目对齐方式
+//   flex-start    起点对齐-默认
+//   flex-end      终点对齐
+//   center        居中
+//   space-between 两端对齐  紧贴父元素
+//   space-around  项目两侧距离相对
+@mixin ju-c ($ju-c) {justify-content: $ju-c;}
+//交叉轴上项目对齐方式
+//   flex-start   起点
+//   flex-end     终点
+//   center       居中
+//   baseline     第一行文字基线对齐
+//   stretch      高度为auto  自动占满整个交叉轴-默认
+@mixin a-s($align-items) {align-items: $align-items;}
+//多轴对齐方式线
+//   flex-start     交叉轴起点对齐 
+//   flex-end       交叉轴终点对齐
+//   center         交叉轴中点对齐
+//   space-between  与交叉轴两端对齐  轴线间隔平均分布
+//   space-around   轴线两边距离相等
+//   stretch        占满交叉轴
+@mixin a-t($align-content) {align-content: $align-content}
+//弹性盒子项目属性   
+//单独设置单个子项目对齐方式
+//    auto         默认继承父元素的align-items属性    
+//    flex-start   交叉轴起点对齐
+//    flex-end     交叉轴终点对齐
+//    stretch      撑满交叉轴
+//    baseline     与容器基线对齐
+//    center       交叉轴终点对齐
+//    initial      父元素继承
+@mixin align-self($align-self){align-self: $align-self}
+//项目在x轴的占比空间的放大缩小
+@mixin flex-item ($flex-grow:0,$flex-shrink:0,$flex-basis:auto){
+    flex-grow:$flex-grow;          //放大比例
+    flex-shrink:$flex-shrink;      //缩小比例
+    flex-basis:$flex-basis;        //x轴占比空间
+}
+//排序 
+@mixin flex-item-order ($order:0){order:$order;}
+
+@mixin flex-full ($flex-grow:0,$flex-shrink:1){
+    flex-grow:$flex-grow;       //放大     
+    flex-shrink:$flex-shrink;   //缩小    
+}
+//单独设置x轴占比空间 
+@mixin flex-item-basis ($flex-basis:auto){flex-basis:$flex-basis;} 
+//子项目的margin   
+//子项目left  right  margin  为自auto会自动占用flexbox的剩余空间所以子项目会自动居中。
+@mixin flex-item-margin() {}
+
+//媒体查询
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}

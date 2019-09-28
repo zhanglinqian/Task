@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/Adaptive framewor.css">
+    <link rel="stylesheet" type="text/css" href="../css/Common Styles.css">
+    <style>
+.carousel{
+    position: relative;
+    width: 100VW;
+    height: 31vw;
+    overflow: hidden;
+    font-size: 0;
+}
+.carousel-mian {
+    position: absolute;
+    left:0;
+    width: 500VW;
+    animation: carouse;/*动画名称*/
+    animation-duration :12s;/*持续时间*/
+    /*animation-timing-function: linear;/*相同的速度开始与结束*/
+    /*animation-delay: 2s;/*动画等待多长时间开始*/
+    animation-iteration-count: infinite;/*无限循环*/
+    animation-direction: normal;/*默认值正常播放*/
+}
+.carousel-mian>div{
+    display: inline-block;
+    width: 100VW;
+}
+@keyframes carouse {
+    0%,15%{left: 0;}
+    25%,35%{left: -100vw;}
+    50%,60%{left: -200vw;}
+    75%,90%{left: -300vw;}
+    100%{left: -400vw;}
+}
+.carousel-msg {
+    height: 20px;
+    width: 60px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 10;
+}
+.carousel-msg>div{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #1f7c55;
+}
+.item-carousel-1 {
+    animation: item-carousel-1 12s infinite;
+}
+@keyframes item-carousel-1 {
+    0%,15% {background-color: #1f7c55}
+    25%,90%{background-color: #fff;}
+    98%,100% {background-color: #1f7c55;}
+}
+.item-carousel-2 {
+    animation: item-carousel-2 12s infinite;}
+@keyframes item-carousel-2 {
+    0%,15% {background-color: #fff}
+    25%,35%{background-color: #1f7c55;}
+    50%,100%{background-color: #fff;}
+}
+.item-carousel-3 { 
+    animation: item-carousel-3 12s infinite;}
+@keyframes item-carousel-3 {
+    0%,35% {background-color: #fff}
+    50%,60%{background-color: #1f7c55;}
+    75%,100%{background-color: #fff;}
+}
+.item-carousel-4 {
+    animation: item-carousel-4 12s infinite;}
+@keyframes item-carousel-4 {
+    0%,60% {background-color: #fff}
+    75%,90%{background-color: #1f7c55;}
+    100%   {background-color: #fff;}
+}
+    </style>
+</head>
+<body>
+    <div class="carousel">
+        <div class="carousel-mian">
+            <div><img src="../img/a/1.png" width="100%"></div>
+            <div><img src="../img/a/2.png" width="100%"></div>
+            <div><img src="../img/a/3.png" width="100%"></div>
+            <div><img src="../img/a/4.png" width="100%"></div>
+            <div><img src="../img/a/1.png" width="100%"></div>
+        </div>
+        <div class="carousel-msg">
+            <div class="item-carousel-1"></div>
+            <div class="item-carousel-2"></div>
+            <div class="item-carousel-3"></div>
+            <div class="item-carousel-4"></div>
+        </div>
+    </div>
+
+<div class="carousel-people">
+    <div class="carousel-people-mian">
+        <!--1-->
+        <div class="carousel-people-itme">
+            <div class="people-card">
+                <img src="../img/头像/ren1.png" height="110px" width="110px">
+                <div>
+                    <p>技术顾问：罗大佑</p>
+                    <p>
+                        百度技术总监：互联网基础 服务领域，从事虚拟主机、 云服务器、
+                        域名。曾任新网 高级技术经理，负责技术研发、团队管理与建设。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-people-itme">
+            <div class="people-card">
+                <img src="../img/头像/ren2.png" height="110px" width="110px">
+                <div>
+                    <p>技术顾问：罗大佑</p>
+                    <p>
+                        百度技术总监：互联网基础 服务领域，从事虚拟主机、 云服务器、
+                        域名。曾任新网 高级技术经理，负责技术研发、团队管理与建设。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-people-itme">
+            <div class="people-card">
+                <img src="../img/头像/ren3.png" height="110px" width="110px">
+                <div>
+                    <p>技术顾问：罗大佑</p>
+                    <p>
+                        百度技术总监：互联网基础 服务领域，从事虚拟主机、 云服务器、
+                        域名。曾任新网 高级技术经理，负责技术研发、团队管理与建设。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-people-itme">
+            <div class="people-card">
+                <img src="../img/头像/ren4.png" height="110px" width="110px">
+                <div>
+                    <p>技术顾问：罗大佑</p>
+                    <p>
+                        百度技术总监：互联网基础 服务领域，从事虚拟主机、 云服务器、
+                        域名。曾任新网 高级技术经理，负责技术研发、团队管理与建设。
+                    </p>
+                </div>
+            </div>
+        </div> 
+        <!--2-->
+        <div class="carousel-people-itme">
+            <div class="people-card">
+                <img src="../img/头像/ren1.png" height="110px" width="110px">
+                <div>
+                    <p>技术顾问：罗大佑</p>
+                    <p>
+                        百度技术总监：互联网基础 服务领域，从事虚拟主机、 云服务器、
+                        域名。曾任新网 高级技术经理，负责技术研发、团队管理与建设。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-people-itme">
+            <div class="people-card">
+                <img src="../img/头像/ren2.png" height="110px" width="110px">
+                <div>
+                    <p>技术顾问：罗大佑</p>
+                    <p>
+                        百度技术总监：互联网基础 服务领域，从事虚拟主机、 云服务器、
+                        域名。曾任新网 高级技术经理，负责技术研发、团队管理与建设。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-people-itme">
+            <div class="people-card">
+                <img src="../img/头像/ren3.png" height="110px" width="110px">
+                <div>
+                    <p>技术顾问：罗大佑</p>
+                    <p>
+                        百度技术总监：互联网基础 服务领域，从事虚拟主机、 云服务器、
+                        域名。曾任新网 高级技术经理，负责技术研发、团队管理与建设。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-people-itme">
+            <div class="people-card">
+                <img src="../img/头像/ren4.png" height="110px" width="110px">
+                <div>
+                    <p>技术顾问：罗大佑</p>
+                    <p>
+                        百度技术总监：互联网基础 服务领域，从事虚拟主机、 云服务器、
+                        域名。曾任新网 高级技术经理，负责技术研发、团队管理与建设。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="carousel-people-msg">
+        <div class="item-carousel-1"></div>
+        <div class="item-carousel-2"></div>
+        <div class="item-carousel-3"></div>
+        <div class="item-carousel-4"></div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <!--友情链接-->
+    <div class="width-auto bgc-fff padding-bottom-30">
+            <div class="width-fixed">
+                <div class="row">
+                    <div class="col-12 font-size-18 text-center font-weight-700 line-height-70">
+                        <p>友情链接</p>
+                    </div>
+                </div>
+                <div class="row friendlink">               
+                    <li class="col-cdxsq-50 col-pd-20 col-3"><a href="#" class="href-a1">手机软件</a></li>
+                    <li class="col-cdxsq-50 col-pd-20 col-3"><a href="#" class="href-a1">教师招聘</a></li>
+                    <li class="col-cdxsq-50 col-pd-20 col-3"><a href="#" class="href-a1">找工作</a></li>
+                    <li class="col-cdxsq-50 col-pd-20 col-3"><a href="#" class="href-a1">手机软件</a></li>
+                    <li class="col-cdxsq-50 col-pd-20 col-3"><a href="#" class="href-a1">手机软件</a></li>
+                    <li class="col-cdxsq-50 col-pd-20 col-3"><a href="#" class="href-a1">教师招聘</a></li>
+                    <li class="col-cdxsq-50 col-pd-20 col-3"><a href="#" class="href-a1">找工作</a></li>
+                    <li class="col-cdxsq-50 col-pd-20 col-3"><a href="#" class="href-a1">手机软件</a></li>
+                    <li class="col-cdxsq-50 col-pd-20 col-3"><a href="#" class="href-a1">手机软件</a></li>
+                    <li class="col-cdxsq-50 col-pd-20 col-3"><a href="#" class="href-a1">手机软件</a></li>
+                    <li class="col-cdxsq-50 col-pd-20 col-3"><a href="#" class="href-a1">手机软件</a></li>
+                    <li class="col-cdxsq-50 col-pd-20 col-3"><a href="#" class="href-a1">教师招聘</a></li>
+                    <li class="col-cdxsq-50 col-pd-20 col-3"><a href="#" class="href-a1">找工作</a></li>
+                    <li class="col-cdxsq-50 col-pd-20 col-3"><a href="#" class="href-a1">手机软件</a></li>
+                    <li class="col-cdxsq-50 col-pd-20 col-3"><a href="#" class="href-a1">手机软件</a></li>
+                    <li class="col-cdxsq-50 col-pd-20 col-3"><a href="#" class="href-a1">教师招聘</a></li>
+                    <li class="col-cdxsq-50 col-pd-20 col-3"><a href="#" class="href-a1">找工作</a></li>
+                    <li class="col-cdxsq-50 col-pd-20 col-3"><a href="#" class="href-a1">手机软件</a></li>
+                    <li class="col-cdxsq-50 col-pd-20 col-3"><a href="#" class="href-a1">手机软件</a></li>
+                    <li class="col-cdxsq-50 col-pd-20 col-3"><a href="#" class="href-a1">手机软件</a></li>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

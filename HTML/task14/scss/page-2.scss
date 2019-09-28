@@ -1,0 +1,108 @@
+
+/*****第二页*****/
+.page-2-nav {
+    border-bottom-color: #fff !important;
+}
+@media (max-width:576px) {
+    .page-2-nav {
+        width: 100%;
+        background-color: #1f7c55;
+        border-bottom-color: rgba($color: #000000, $alpha: 0)!important;
+    }
+}
+.sidebar {
+    border-radius:10px;
+    border-radius: 5px;
+    background-color: #fff;
+    >div:nth-child(1) {
+        border-bottom: 1px solid #ff640c;
+    }
+}
+/*侧边栏样式*/
+.sidebar-bottom {
+    padding-left: 20px;
+    line-height: 50px;
+    >ul {padding-left: 0;}
+    >ul>li {
+        width: 100px;
+        list-style: none;
+        margin-left: auto;
+        margin-right: auto;
+        >i{
+        height: 8px;
+        width: 8px;
+        margin-right: 5px;
+        border:1px;  
+        border-radius:50%;
+        border-style: solid;
+        border-color: #ff640c;
+        box-sizing: content-box;
+        display: inline-block;
+        }
+    }
+}
+.sidebar-bottom {
+    >ul>li:hover {
+        >a {
+            color:#ff640c;
+            cursor: pointer;
+        }
+        >i{background-color: #ff640c;}
+    }
+}
+.mian-style {
+    background-color: #fff;
+    border-radius:10px;
+    text-indent:30px;
+    padding: 10px 70px 30px 70px;
+}
+@media (max-width:576px) {
+    .mian-style {
+        padding: 10px 30px 30px 30px;
+    }
+}
+@media (max-width:380px) {
+    .mian-style {
+        padding: 10px 15px 30px 15px;
+    }
+}
+
+.mian-top {
+    border-bottom-width: 1px;
+    border-bottom-color: #e6e6e6;
+    border-bottom-style: solid;
+    padding-bottom: 30px;
+    >div:nth-child(1) {
+        flex-grow: 0;
+        text-indent:0;
+        line-height: 0;
+        margin-right: 15px;
+    }
+}
+.mian-bottom {
+    padding-bottom: 80px; 
+    >p {
+    margin-bottom: 30px;
+    }
+}
+@media (max-width: 575.98px)
+{
+    .mian-top {
+        flex-wrap: wrap;
+        justify-content: center;
+        p{padding: 0;}
+        >div {
+            flex-basis: 100%;
+        }
+        >div:nth-child(1) {
+            margin: 0 {
+                top:20px;
+                bottom: 20px;
+            }
+        }
+        
+    }
+}
+
+
+

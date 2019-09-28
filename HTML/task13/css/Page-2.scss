@@ -1,0 +1,146 @@
+@import "General";
+
+body{
+    margin: 0;
+    padding-top:130px;
+    padding-bottom: 70px;
+}
+div {
+    position: relative;
+}
+p {margin: 0;}
+a {line-height: 0}
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
+.nav {
+    @include width-fixed;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size: 18px;
+    line-height: 46px;
+    color:#fff;
+    background-color: #29bde0;
+}
+.header-audio {
+    @include width-fixed;
+    background-color: #29bde0;
+    font-size: 14px;
+    .mp3 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        line-height: 46px;
+        padding-left: 20px;
+        background-color: #b9e9f5;
+        margin-left: -10px;
+        margin-right: -10px;
+    >audio {
+        position: absolute;
+        top: 0;
+        right: -261px;
+        height: 46px;
+        opacity:0.4;
+        }
+    }
+    div:nth-child(2) {
+        height: 0;
+        width: 0;
+        border: 0.5rem;
+        border-style: solid;
+        border-color: #b9e9f5;
+        border-bottom: 0;
+        border-left-color: rgba(255,255,255,0);
+        border-right-color: rgba(255,255,255,0);
+        margin-left: 10%;
+    }
+    div:nth-child(3) {
+        padding-left: 65px;
+        color: #fff;
+        line-height: 30px;
+    }
+}
+.content {
+    height: 1500px;
+    @include width-fixed;
+    background-color: #29bde0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: flex-start;
+    >div {
+        flex-basis: 33.33333%;
+    }
+}
+
+.content-options {
+    display: inline-block;/**弹性盒子项目*/
+    >div {
+        width: 80px;
+        margin: 0 auto;/**文字图标的父级*/
+        cursor: pointer;
+         &:hover div:nth-child(2){opacity:1;}/**图标显示*/
+    }
+   
+}
+.content-options-top {
+    border:5px solid #fff;/**文字方块*/
+    text-align: center;
+    box-sizing: border-box;
+    width: 80px;   
+    p:nth-child(1) {        
+        line-height:50px;
+        background-color: #f5c97b;/**水民*/
+    }
+    p:nth-child(2) {       
+        line-height: 20px;
+        font-size: 12px;
+        color: #fff;
+        background-color: #83b09a;/**1号*/
+    }
+}
+.content-options-bottom {
+    display: flex;
+    justify-content:space-between;/*四个小图标*/
+    align-items:center;
+    padding-top:10px;
+    padding-bottom: 10px;
+    opacity:0.2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    >div {
+        @include width-fixed;
+        height: 70px;
+        padding-bottom: 10px;
+        background-color: #29bde0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        >button {
+            height: 40px;
+            width: 80%;
+            @include button-style(#fff, 18px, 30px, #fbb435)
+        }
+    }
+}

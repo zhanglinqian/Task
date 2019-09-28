@@ -1,0 +1,280 @@
+
+@charset "utf-8";
+/*
+  Document   : CSS样式初始化
+  Created on : 2016. 8. 7,09:41:00
+  Author :
+  Description:
+  CSS样式表的初始化，全局样式设置。部分样式属性请根据具体页面重置其属性
+  导入方式：<link href="css/common.css" rel="stylesheet" type="text/css" /> */
+
+/* reset */
+body{margin: 0;}/*****/
+
+body,div,dl,dt,dd,ul,ol,
+li,h1,h2,h3,h4,h5,h6,
+pre,code,form,fieldset,legend,textarea,
+p,blockquote,th,td,input,select,textarea,button
+ {margin:0;padding:0}                                  /* 初始化标签在所有浏览器中的margin、padding值 */
+
+fieldset,img {border:0 none}                           /* 重置fieldset（表单分组）、图片的边框为0*/
+
+dl,ul,ol,menu,li {list-style:none}                     /* 重置类表前导符号为onne,menu在HTML5中有效 */
+
+blockquote, q {quotes: none}                           /* 重置嵌套引用的引号类型 */
+
+blockquote:before, blockquote:after,q:before, q:after {content:'';content:none}  /* 重置嵌套引用*/
+
+input,select,textarea,button {vertical-align:middle}   /* 重置表单控件垂直居中*/
+
+button {border:0 none;background-color:transparent;cursor:pointer}  /* 重置表单button按钮效果 */
+
+body {background:#fff}                              /* 重置body 页面背景为白色 */
+
+body,th,td,input,select,textarea,button 
+{font-size:12px;line-height:1 ;font-family:"微软雅黑", "黑体","宋体";color:#666} /* 重置页面文字属性 */
+
+a {color:#666;text-decoration:none}                 /* 重置链接a标签 */
+
+a:active, a:hover {text-decoration:none}              /* 重置链接a标签的鼠标滑动效果 */
+
+address,caption,cite,code,dfn,em,var {font-style:normal;font-weight:normal}  /* 重置样式标签的样式 */
+
+
+caption {display:none;}                               /* 重置表格标题为隐藏 */
+
+table {width:100%;border-collapse:collapse;border-spacing:0;table-layout:fixed;}    /* 重置table属性 */
+
+img{vertical-align:top}                               /* 图片在当前行内的垂直位置 */
+
+
+
+
+
+/* 页面设置 */
+
+
+a {outline: none;}                                   /* 取消a标签点击后的虚线框 */
+
+
+/*
+a:active {star:expression(this.onFocus=this.blur());}/* 设置页面文字等在拖动鼠标选中情况下的背景色与文字颜色 */
+
+
+
+/* 
+::selection {color: #fff;background-color: #4C6E78;}    
+::-moz-selection {color: #fff;background-color: #4C6E78;} 
+*/
+
+/*清除浮动*/
+.clear{clear: both;}
+
+/*清除浮动--推荐使用*/
+.clearfix:before,.clearfix:after{content: '';display: table;}
+
+.clearfix:after{clear: both;}
+
+/*
+作者：嵐烨 
+来源：CSDN 
+原文：https://blog.csdn.net/u014516981/article/details/52141451 
+版权声明：本文为博主原创文章，转载请附上博文链接！*/
+
+
+
+/*重置样式表-重置样式表重置样式表-重置样式表-重置样式表-重置样式表*/
+
+/*腾讯tx-style*/
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0}
+
+body{font:12px "宋体","Arial Narrow",HELVETICA;background:#fff;-webkit-text-size-adjust:100%}
+
+a{color:#172c45;text-decoration:none}
+
+a:hover{color:#cd0200;text-decoration:underline}
+
+em{font-style:normal}
+
+li{list-style:none}
+
+img{border:0;vertical-align:middle}
+
+table{border-collapse:collapse;border-spacing:0}
+
+p{word-wrap:break-word}
+
+
+/*百度*/
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0}
+html{color:#000;overflow-y:scroll;overflow:-moz-scrollbars-vertical}
+body,button,input,select,textarea{font-size:12px;font-family:arial,'Hiragino Sans GB','Microsoft Yahei','微软雅黑','宋体',\5b8b\4f53,Tahoma,Arial,Helvetica,STHeiti}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+em{font-style:normal}
+small{font-size:12px}
+ul,ol{list-style:none}
+a{text-decoration:none}
+a:hover{text-decoration:underline}
+legend{color:#000}
+fieldset,img{border:0}
+button,input,select,textarea{font-size:100%}
+table{border-collapse:collapse;border-spacing:0}
+img{-ms-interpolation-mode:bicubic}
+textarea{resize:vertical}
+.left{float:left}
+.right{float:right}
+.overflow{overflow:hidden}
+.hide{display:none}
+.block{display:block}
+.inline{display:inline}
+.error{color:#F00;font-size:12px}
+label,button{cursor:pointer}
+.clearfix:after{content:'\20';display:block;height:0;clear:both}
+.clearfix{zoom:1}.clear{clear:both;height:0;line-height:0;font-size:0;visibility:hidden;overflow:hidden}
+.wordwrap{word-break:break-all;word-wrap:break-word}
+pre.wordwrap{white-space:pre-wrap}
+body{text-align:center}
+body,form{position:relative}
+td{text-align:left}
+img{border:0}
+
+/*新浪*/
+
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img { margin:0; padding:0; }
+fieldset, img { border:none; }
+img{display: block;}
+address, caption, cite, code, dfn, th, var { font-style:normal; font-weight:normal; }
+ul, ol { list-style:none; }
+input { padding-top:0; padding-bottom:0; font-family: "SimSun","宋体";}
+input::-moz-focus-inner { border:none; padding:0; }
+select, input { vertical-align:middle; }
+select, input, textarea { font-size:12px; margin:0; }
+input[type="text"], input[type="password"], textarea { outline-style:none; -webkit-appearance:none; }
+textarea { resize:none; }
+table { border-collapse:collapse; }
+body { color:#333; padding:5px 0; font:12px/20px "SimSun","宋体","Arial Narrow",HELVETICA; background:#fff;/* overflow-y:scroll;*/ }
+.clearfix:after { content:"."; display:block; height:0; visibility:hidden; clear:both; }
+.clearfix { zoom:1; }
+.clearit { clear:both; height:0; font-size:0; overflow:hidden; }
+a { color:#666; text-decoration:none; }
+a:visited { color:#666; }
+a:hover, a:active, a:focus { color:#ff8400; text-decoration:underline; }
+
+/*淘宝*/
+
+    body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
+    body, button, input, select, textarea { font:12px/1.5tahoma, arial, \5b8b\4f53; }
+    h1, h2, h3, h4, h5, h6{ font-size:100%; }
+    address, cite, dfn, em, var { font-style:normal; }
+    code, kbd, pre, samp { font-family:couriernew, courier, monospace; }
+    small{ font-size:12px; }
+    ul, ol { list-style:none; }
+    a { text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    sup { vertical-align:text-top; }
+    sub{ vertical-align:text-bottom; }
+    legend { color:#000; }
+    fieldset, img { border:0; }
+    button, input, select, textarea { font-size:100%; }
+    table { border-collapse:collapse; border-spacing:0; }    
+
+/*网易*/
+
+html {overflow-y:scroll;}
+body {margin:0; padding:0; font:12px/1.5 \5b8b\4f53,Arial,sans-serif;/*background:#ffffff;*/}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,blockquote,p{padding:0; margin:0;}
+table,td,tr,th{font-size:12px;}
+ol,ul {list-style:none;}
+li{list-style-type:none;}
+img{vertical-align:top;border:0;}
+h1,h2,h3,h4,h5,h6{font-size:inherit; font-weight:normal;}
+address,cite,code,em,th,i{font-weight:normal; font-style:normal;}
+.hx a,.hx em,.fB{font-weight:bold;}
+.clearfix{*zoom:1;}
+.clearfix:after{display:block; overflow:hidden; clear:both; height:0; visibility:hidden; content:".";}
+a {color:#252525; text-decoration:none;}
+a:visited {text-decoration:none;}
+a:hover {color:#ba2636;text-decoration:underline;}
+a:active {color:#ba2636;}
+
+/*搜狐*/
+body{font-family:"\5B8B\4F53","Arial Narrow",HELVETICA;text-align:center;margin:0 auto;padding:0;background:#FFF;font-size:12px;color:#333;}
+body > div{text-align:center;margin-right:auto;margin-left:auto;} 
+div,form,ul,ol,li,span,p{margin:0;padding:0;border:0;}
+img,a img{border:0;margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6{margin:0;padding:0;font-size:12px;font-weight:normal;}
+ul,ol,li{list-style:none}
+table,td,input{font-size:12px;padding:0}
+/* 默认链接颜色 */
+a{outline-style:none;color:#333;text-decoration:none}
+a:hover{color:#c00;text-decoration:underline;}
+
+/*清除链接虚框*/
+/*a,area {blr:expression(this.onFocus=this.blur()) }  for IE 
+:focus {-moz-outline-style: none; }  for Firefox   
+*/
+
+/*优酷*/
+
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block}
+audio,canvas,video{display:inline-block;*display:inline;*zoom:1}
+audio:not([controls]){display:none}
+html{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
+a:focus{outline:thin dotted #333;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}
+a:hover,a:active{outline:0}
+figure{padding:0;margin:0}
+sub,sup{position:relative;font-size:75%;line-height:0;vertical-align:baseline}
+sup{top:-0.5em}
+sub{bottom:-0.25em}
+img{vertical-align:middle;border:0;-ms-interpolation-mode:bicubic}
+button,input,select,textarea{margin:0;font-size:100%;vertical-align:middle}
+button,input{*overflow:visible;line-height:normal}
+button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}
+button,input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}
+input[type="search"]{-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;-webkit-appearance:textfield}
+input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-search-cancel-button{-webkit-appearance:none}
+textarea{overflow:auto;vertical-align:top}
+ol,ul,dl{list-style:none}
+body,p,ol,ul,dl{padding:0;margin:0}
+a:link,a:visited{text-decoration:none;color:#555}
+a:hover{color:#c31}
+a.white{color:#fff}
+a.blue{color:#3399e0}  
+
+/*美团*/
+
+blockquote,body,code,dd,div,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,input,legend,li,ol,p,pre,td,textarea,th,ul{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+fieldset,img{border:0}
+address,caption,cite,code,dfn,em,var{font-style:normal;font-weight:400}
+li{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+q:after,q:before{content:''}
+abbr,acronym{border:0;font-variant:normal}
+sup{vertical-align:text-top}
+sub{vertical-align:text-bottom}
+input,select,textarea{font-family:inherit;font-size:inherit;*font-size:100%;font-weight:inherit}
+legend{color:#333}html{background-color:#eee}
+body{font:400 14px/1.5 "Hiragino Sans GB","WenQuanYi Micro Hei",tahoma,sans-serif;color:#666;background-color:#fff}
+a{color:#2bb8aa;text-decoration:none}a:hover{text-decoration:underline}
+h1,h2,h3,h4,h5,h6{font-family:"Hiragino Sans GB"," Microsoft YaHei","WenQuanYi Micro Hei",arial,sans-serif;color:#333;-webkit-font-smoothing:antialiased}
+input[type=password]{font-family:arial,sans-serif}
+
+/*雅虎*/
+
+html{color:#000;background:#FFF}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+fieldset,img{border:0}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}
+ol,ul{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+q:before,q:after{content:''}
+abbr,acronym{border:0;font-variant:normal}
+sup{vertical-align:text-top}
+sub{vertical-align:text-bottom}
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;*font-size:100%}
+legend{color:#000}
+#yui3-css-stamp.cssreset{display:none}

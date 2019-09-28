@@ -1,0 +1,158 @@
+html{
+    font-size: 62.5%;
+    max-width: 768px;
+    min-width: 300px;
+    margin: 0 auto;
+}
+body{
+    padding-top: 4.5rem;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+.header{
+    width: 100%;
+    max-width: 768px;
+    height: 4.5rem;
+    background-color: #29bde0;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+.header1{
+    width: 1.7rem;
+    height: 2rem;
+    border:0;
+    border-top:0.3rem;
+    border-bottom:0.3rem;
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+    border-style: solid;
+    padding: 0;
+    margin: 1.25rem 0 1.25rem 1.1rem;
+    background-color: #29bde0;
+    cursor: pointer; /* 鼠标移入按钮范围时出现手势 */
+    outline: none;/*轮廓线-消除*/
+}
+.header01{
+    height: 0.33rem;
+    background-color: #fff;
+}
+.ln{
+    width: 90%;
+    height: 5.8rem;
+    border:1px;
+    border-color: #c9c9c9;
+    border-style: solid;
+    margin: 1.3rem auto;
+    background-color: #fff; 
+    color: #9a9a9a;  
+    font-size: 1.75rem;
+    line-height: 5.8rem;
+    text-align: center;    
+}
+.ln-1{ 
+    float:right;
+    height: 5.8rem;
+    width: 5.8rem;
+    background-image: url(../img/1-Version/返.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+}
+.ln-2{ 
+    width: 18rem;
+    margin: 0 auto;      
+}
+         /*版本选择*/
+.content{
+    width: 90%;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px;
+    border-style: solid;
+    border-color: #c9c9c9;
+    position: relative;
+    top:0;
+}
+.content-1{
+    position: absolute;
+    top:46%;
+    right: 2%;
+    height: 0;
+    width: 0;
+    padding: 0;
+    border:2rem;
+    border-right: 0;
+    border-style: solid;
+    border-left-color: #fbb435;
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+    outline: none;   
+}
+.flexbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.flexitem-1{
+    width: 100%;
+    border:0;
+    border-bottom: 1px;
+    border-color: #fbb435;
+    border-style: solid;
+    margin-bottom: 1.5rem;
+    font-size: 1.9rem;
+    line-height: 4.5rem;
+    text-align: center;
+    color: #fbb435;
+}
+.flexitem-2{
+    width: 75%;
+    color: #787878;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 4rem;   
+}
+a{
+    text-decoration: none;
+}
+a:link{
+    color: #fff;
+}
+a:visited{
+    color: #fff;
+}
+a:hover{
+    color: rgb(224, 19, 19);
+}
+
+.flexitem-2-1{
+     background-color: #69d1e9;
+     font-size: 1.9rem;
+     line-height: 6.8rem;     
+     color: #fff;
+}
+.flexitem-2-3{
+    height: 1.8rem;
+    width: 100%;
+    text-align: center;
+}
+.flexitem-2-3-1{
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+    background-color: #69d1e9;
+}
+.flexitem-2-3-2{
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+}

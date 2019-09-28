@@ -1,0 +1,87 @@
+
+.box {background-color: #29bde0;}
+
+
+#tips{
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+
+.nav-mp3, .nav-bottom{
+    box-sizing: border-box;
+    max-width: 760px;
+    line-height: 40px;
+    margin: 0 auto;
+}
+.nav-mp3 {
+    padding-left: 20px;
+    margin: 5px auto;
+    background-color: #b9e9f5;
+}
+.nav-bottom {
+    color: #fff;
+    padding-left: 35px;
+}
+.myaudio {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 110px;
+    height: 40px;
+}
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    align-content: flex-start;
+    width: 92%;
+    margin: 30px auto;
+    //overflow: auto;
+    > div {
+        flex-basis: 33.33333%;
+    }
+}
+.content-items {  /*玩家盒子样式*/
+    z-index: 9;
+    p {margin: 0;}
+    > div {
+        text-align: center;
+        width: 100px;
+        margin: 0 auto;
+        > div:nth-child(1) {
+            border: 5px #fff solid;
+            > p:nth-child(1){
+                font-size: 20px;
+                line-height: 65px;
+                background-color: #f5c97b;
+            }
+            > p:nth-child(2){
+                color: #fff;
+                font-size: 14px;
+                line-height: 25px;
+                background-color: #83b09a;
+            }
+        }
+        > div:nth-child(2) {
+            height: 25px;
+            padding: 5px;
+            > img {
+                display: none;
+            }
+        }
+        &:hover > div:nth-child(2) > img{
+        display: inline-block;
+        }
+    }
+}
+
+.content-color {   /*死亡状态样式*/
+    > div {
+        > div:nth-child(1) {
+            > p {
+                background-color: #83b09a !important;
+            }
+        }
+    }
+}

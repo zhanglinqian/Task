@@ -1,0 +1,181 @@
+@import"..\\..\\z-css\\component";
+//(小于  576px)
+@media (max-width:575.98px){
+    /*第一栏自适应*/
+    .content-top {
+        margin-top:20px;
+        p{text-align: center;}
+        div:nth-child(4){
+            >div{
+                border-left:none !important;
+                margin-left: 0;
+                margin-top: 20px;
+                padding: 0;
+            }
+        }
+    }
+}
+//(大于等于  576px)
+@media (min-width: 576px) and (max-width: 767.98px) {
+        /*第一栏自适应*/
+    .content-top {
+        margin-top:50px;
+        p{text-align: center;}
+        div:nth-child(4){
+        >div{
+            border-left:none !important;
+            margin-left: 0;
+            padding-left: 0;
+            }
+        }
+    }
+}
+//(大于等于  768px)
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /*第一栏自适应*/
+    .content-top {
+        margin-top:50px;
+        p{text-align: center;}
+        div:nth-child(4){
+        >div{
+            border-left:none !important;
+            margin-left: 0;
+            padding-left: 0;
+            }
+        }
+    }
+}
+/**第一栏***/
+.img34-14 {
+    height: 25px ;
+}
+.content-top {
+    div:nth-child(4){
+        >div{
+            border-left:1px solid #dee2e6;
+        }
+    }
+}
+/*第二栏*/
+/*/圆圈*/
+.content-border-radius {
+    @include round(70px,70px,50%,#fff);
+    @include box-shadow-Lack(0,0,10px,#dad2d2);
+    line-height:70px;
+    text-align: center;
+    color:#29b078;
+}
+.content-center-center,.content-center-bottom {
+    >div{
+        margin-top: 10px;
+        padding-left: 0;
+    }
+}
+//.content-center-top {}
+//.content-center-center {}
+//.content-center-bottom {}
+//  .arrow-2, .arrow-3, .arrow-4, 
+//  .arrow-6, .arrow-7, .arrow-8
+//媒体查询
+@media (min-width:576px)and(max-width:992px){
+    .content-center-bottom {
+        margin-top: 0;
+    }
+    .round {padding-left: 0;}
+    .arrow-3,.arrow-7 {display:none;}
+}
+@media (min-width: 992px) {
+    .content-center-center,.content-center-bottom {
+        >div:nth-child(1) {padding-left: 15px;}
+        >div:nth-child(5) {padding-left: 15px;}
+    }
+}
+//手机纵向显示
+@media (max-width: 575.99px) {
+    .arrow-2, .arrow-3, .arrow-4, 
+    .arrow-6, .arrow-7, .arrow-8 {
+        display:none;
+    }
+    .content-center-bottom {
+        margin-top: 0;
+    }
+    .content-border-radius {
+        width: 45px;
+        height: 45px;
+        line-height:45px;
+    }
+}
+//手机横向显示
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .content-border-radius {
+        width: 55px;
+        height: 55px;
+        line-height:55px;
+    }
+}
+//中型设备     平板电脑
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .content-border-radius {
+        width: 60px;
+        height: 60px;
+        line-height:60px;
+    }
+}     
+/*战略合作企业*/
+.logo-top {
+    @include box-shadow-Lack(0,0,10px,#dad2d2);
+}
+.logo {
+    >img{
+    max-width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    }
+    &:hover{
+        @include box-shadow-Lack(0,0,10px,#dad2d2);
+    }
+}
+//媒体查询
+// 超小型设备  手机纵向显示     (小于  576px)
+@media (max-width: 575.98px) {.logo{line-height: 80px;}}
+// 小型设备    手机横向显示      (大于等于  576px)
+@media (min-width: 576px) and (max-width: 767.98px) {.logo{line-height: 100px;}}
+/*友情链接*/
+.friendlink{
+    text-align: center;
+    div {padding: 0;}
+    li{
+        text-align: justify;
+        width: 87px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    a{
+    display: inline-block;
+    color:#999;
+    border:0;
+    border-top:1px;
+    border-bottom:1px;
+    border-style: solid;
+    border-color:rgba(255, 255, 255,0);
+    margin: 0 auto;
+        &:link {color:#999;}
+        &:visited {color:#999;}
+        &:hover{
+        border-bottom: 1px solid #29b078;
+        z-index: 777;
+        }
+    }
+}
+@media (max-width:420px){
+    .friendlink{
+        font-size: 12px;
+        li{
+            width: auto;
+            text-align: center !important;
+            list-style: none;
+        }
+    }
+}
+
+

@@ -1,0 +1,115 @@
+
+
+    body{
+          margin:0; 
+          background-color:#eff0f4;           
+         }
+     .position{
+         position:relative;
+         top:0;
+         left:0;
+               }
+      .block0{
+          width:100%;
+          height:100%;
+          margin:0 auto;
+              }
+  .block1{
+      background-color:#5fc0cd;
+      font:1.7rem/4.5rem"微软黑雅";
+      color:#ffffff;
+      text-align:center;
+      height:4.5rem;
+      width:100%;
+         }
+  .p0{
+      margin:0;
+  }
+  .p1{
+      float:left;
+      text-align:left;
+      font:1.5rem/4.5rem"微软雅黑";
+      margin:0 1.5rem;    
+
+    }
+  .p2{
+      float:right;
+      text-align: right;
+      font:1.5rem/4.5rem"微软雅黑"; 
+      margin:0 1.5rem;
+  }
+  .block2{
+    widows:100%;
+    margin:0.8rem 0 0 0;
+    background-color:#ffffff;
+    vertical-align: middle;   
+}
+
+.input3{
+    border:none;
+    outline:none;
+    height:5rem;
+    width:70%;
+    font:1.5rem/5rem "微软雅黑"; 
+    padding:0  0  0 0.2rem;   
+}
+.img1{
+  background:url(img/iphone.png)
+              no-repeat center;           
+              width:5rem;
+              height:5rem; 
+              margin:0; 
+              display:inline-block;
+              vertical-align:top;             
+              }
+.img2{
+  background:url(img/locked.png)
+                 no-repeat center;
+                 width:5rem;
+                 height:5rem; 
+                 margin:0; 
+                 display:inline-block;
+                 vertical-align:top;             
+                 }
+.div1{
+    display:inline-block;
+    height:3rem;
+    width:0.15rem;
+    margin:1rem 0;
+    background-color:#eaedee;
+    vertical-align:top;
+}
+
+.logon{
+  -webkit-appearance:none;
+  -moz-appearance:none;
+   appearance:none;
+   outline:0; 
+   border:0;
+   background-color:#5fc0cd;
+   color:#ffffff;
+   text-align:center; 
+   letter-spacing:0.5rem;
+   font-size:2rem; 
+   line-height:5rem;  
+   width:100%;
+   height:5rem; 
+   margin:3.5rem 0  0 0;
+}
+
+ .txt{   
+     -webkit-appearance:none;
+     -moz-appearance:none;
+      appearance:none;
+      outline:0; 
+      background-color:transparent;
+      float:right;
+      width:10.5rem;
+      height:3.5rem;
+      color:#5fc0cd;
+      border:0;
+      margin:0;
+      font-size:1.5rem; 
+      line-height:3.5rem;
+      text-align:center;
+     }

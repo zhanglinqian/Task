@@ -1,0 +1,258 @@
+@charset "UTF-8";
+html {
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+body {
+  padding: 0;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+body {
+  padding-top: 86px;
+  padding-bottom: 50px;
+}
+
+/*!导航*/
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.nav-top {
+  background-color: #5fc0cd;
+  width: 100%;
+  padding: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.nav-top div {
+  width: 144px;
+  border-radius: 5px;
+  margin: 0 auto;
+  font-size: 0;
+  background-color: #55a8b3;
+}
+
+.nav-top div button {
+  width: 72px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  padding: 0;
+  color: #fff;
+  font-size: 18px;
+  line-height: 35px;
+  background-color: #55a8b3;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+.nav-top div :nth-child(1) {
+  background-color: #55a8b3;
+  color: #fff;
+}
+
+.nav-top div :nth-child(1):hover {
+  background-color: #fff;
+  color: #5fc0cd;
+}
+
+.nav-top div :nth-child(1):hover + button {
+  background-color: #55a8b3;
+  color: #fff;
+}
+
+.nav-top div :nth-child(2) {
+  background-color: #fff;
+  color: #5fc0cd;
+}
+
+.nav-top a {
+  float: right;
+  padding: 5.5px 10px;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  border-bottom: 1px solid #e1e5e7;
+}
+
+.menu select {
+  height: 40px;
+  text-align: center;
+  outline: none;
+  border: 0;
+  font-size: 14px;
+  color: #999;
+  order: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  text-align-last: center;
+}
+
+.menu :nth-child(2) {
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-image: linear-gradient(#f3f5f6, #c6c8c9, #f3f5f6) 1;
+}
+
+.content {
+  line-height: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-bottom: 1px solid #d6d8da;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.content div:nth-child(1) {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  order: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 100%;
+  font-size: 13px;
+  color: #999;
+}
+
+.content div:nth-child(1) img {
+  margin-right: 10px;
+}
+
+.content div:nth-child(2) {
+  width: 50%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  order: 0;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+
+.content div:nth-child(2) p {
+  padding-left: 22px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.content div:nth-child(3) {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  align-items: center;
+  font-size: 15px;
+  color: #e63b0e;
+  font-weight: 700;
+  order: 0;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+
+.content div:nth-child(3) img {
+  margin-left: 10px;
+}
+
+.content div:nth-child(3) a {
+  line-height: 0 !important;
+}
+
+.content div:nth-child(4) {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  order: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 100%;
+  font-size: 13px;
+  color: #999;
+}
+
+.content div:nth-child(4) img {
+  margin-right: 10px;
+}
+
+.content p {
+  display: inline-block;
+}
+
+.content img {
+  display: inline-block;
+}
+
+.footer {
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8fafb;
+  font-size: 10px;
+  color: #999;
+  height: 50px;
+  justify-content: space-around;
+}
+
+.footer a {
+  display: inline-block;
+}
+
+.footer a:nth-child(1) {
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer a:nth-child(1) img {
+  margin-bottom: 5px;
+}
+
+.footer a:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer a:nth-child(3) {
+  margin-right: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer a:nth-child(3) img {
+  margin-bottom: 5px;
+}

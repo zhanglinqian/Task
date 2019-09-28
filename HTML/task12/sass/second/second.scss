@@ -1,0 +1,150 @@
+@import "general.scss";
+body{
+    padding-top:86px;
+    padding-bottom:50px;
+}
+/*!导航*/
+.nav{
+    @include fixed-top;
+    @include width-768;
+}
+.nav-top{
+    @include bgc-5fc0cd;
+    width:100%;
+    padding : 0 {
+        top:5px;
+        bottom:5px;
+    } 
+    div{
+        width:144px;
+        border-radius: 5px;
+        margin: 0 auto;
+        font-size: 0;
+        @include bgc-55a8b3;
+        button{
+            width: 72px;
+            @include button-style(#fff,18px,35px,#55a8b3);
+        }
+        :nth-child(1){
+            background-color: #55a8b3;
+            color:#fff;
+            &:hover{
+                background-color: #fff;
+                color:#5fc0cd;
+            }
+            &:hover+button{
+                background-color: #55a8b3;
+                color:#fff;
+            }
+        }
+        :nth-child(2){
+            background-color: #fff;
+            color:#5fc0cd;
+        }
+    }
+    a{        
+        float: right;
+        padding:5.5px 10px; 
+    }
+}
+.menu{
+    @include nowrap;
+    border-bottom:1px solid #e1e5e7;
+    select{
+        height: 40px;
+        text-align: center;
+        outline: none;
+        border:0;
+        @include font-14;
+        @include flex-item(0,1,1);
+        text-align-last: center;
+    }
+    :nth-child(2){
+    border-left:1px solid;
+    border-right: 1px solid;
+    border-image:linear-gradient(#f3f5f6,#c6c8c9,#f3f5f6)1;
+    }
+}
+.content{
+    line-height: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-bottom:1px solid #d6d8da;
+    @include flex-wrap-left;
+    div:nth-child(1){
+        @include nowrap;
+        @include flex-item(0,1,1,100%);
+        @include font-13;
+        img{
+            margin-right: 10px;
+        }
+    }
+    div:nth-child(2){
+        width: 50%;
+        @include nowrap;
+        @include font-14-700;
+        @include flex-item(0,0,1);
+        p{            
+            padding-left: 22px;
+            text-overflow: ellipsis; 
+            white-space: nowrap;
+            overflow: hidden; 
+        }
+    }
+    div:nth-child(3){
+        width: 50%;
+        @include flex-nowrap-end;
+        @include font-15;
+        @include flex-item(0,0,1);
+        img{
+            margin-left: 10px;
+        } 
+        a{
+            line-height: 0 !important;
+        }
+    }
+    div:nth-child(4){
+        @include nowrap;
+        @include flex-item(0,1,1,100%);
+        @include font-13;
+        img{
+            margin-right: 10px;
+        }
+    }
+    p{
+        display: inline-block;
+    } 
+    img{
+        display: inline-block;
+    }
+}
+.footer{
+    @include width-768;
+    @include fixed-bottom;
+    @include flex-wrap;
+    @include bgc-f8fafb;
+    @include font-10;
+    height: 50px;  
+    justify-content: space-around; 
+    a{
+        display: inline-block;
+    }
+    a:nth-child(1){
+        margin-left: 10%;
+        @include flex-flex-direction ;
+        img{
+            margin-bottom:5px;
+        }
+
+    }
+    a:nth-child(2){
+        @include flex-flex-direction ;
+    }
+    a:nth-child(3){
+        margin-right: 10%;
+        @include flex-flex-direction ;
+        img{
+            margin-bottom:5px;
+        }
+    }
+}

@@ -1,0 +1,388 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>葡萄藤PPT</title>
+    <link rel="stylesheet" href="https://ptteng.github.io/PPT/css/reveal/reveal.css">
+    <!-- PPT主题，可以在/css/reveal/theme/中选择其他主题，目前暂时只能使用该模板 -->
+    <link rel="stylesheet" href="https://ptteng.github.io/PPT/css/reveal/theme/ptt.css">
+    <!-- syntax highlighting 代码高亮主题 -->
+    <link rel="stylesheet" href="https://ptteng.github.io/PPT/lib/reveal/css/zenburn.css">
+    <link rel="icon" href="favicon.ico" type="x-icon">
+    <style>
+        .float {
+            float: left;
+        }
+    </style>
+    <!-- 打印和PDF输出样式 -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? 'https://ptteng.github.io/PPT/css/reveal/print/pdf.css' : './css/reveal/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+</head>
+<body>
+<img src="./葡萄藤PPT_files/logo.png" alt="" usemap="#pttmap" class="base-logo">
+<map name="pttmap">
+    <area shape="rect" coords="0,0,276,58" href="http://www.jnshu.com/" alt="" target="_blank">
+</map>
+<!--首页-->
+<div class="reveal default center" role="application" data-transition-speed="slow" data-background-transition="fade">
+    <div class="slides" style="width: 960px; height: 700px; left: 50%; top: 50%; bottom: auto; right: auto; transform: translate(-50%, -50%) scale(0.756);">
+        <section class="past" style="top: 158px; display: none;" hidden="" aria-hidden="true">
+            <h3>常见Dom操作有哪些？</h3>
+            <p>分享人：张林骞</p>
+        </section>
+        <!--目录-->
+        <section class="past" style="top: 3px; display: block;" hidden="" aria-hidden="true">
+            <p>目录</p>
+            <p>1.背景介绍</p>
+            <p>2.知识剖析</p>
+            <p>3.常见问题</p>
+            <p>4.解决方案</p>
+            <p>5.编码实战</p>
+            <p>6.扩展思考</p>
+            <p>7.参考文献</p>
+            <p>8.更多讨论</p>
+        </section>
+        <!--背景介绍-->
+        <section class="past" style="top: 267px; display: block;" hidden="" aria-hidden="true">
+            <h3>1.背景介绍</h3>
+        </section>
+        <section class="past" style="top: 267px; display: block;" hidden="" aria-hidden="true">
+            <p>什么是DOM？简单地说，DOM是一套对文档的内容进行抽象和概念化的方法</p>
+
+            <p>DOM（文档对象模型）是一种用于HTML和XML文档的编程接口，
+                它给文档提供了一种结构化的表示方法，可以改变文档的内容和呈现方式。我们最为关心的是，DOM把网页和脚本以及其他的编程语言联系了起来。</p>
+
+            <p>DOM实际上是以面向对象方式描述的文档模型。DOM定义了表示和修改文档所需的对象、这些对象的行为和属性以及这些对象之间的关系。
+                可以把DOM认为是页面上数据和结构的一个树形表示，不过页面当然可能并不是以这种树的方式具体实现。
+                通过 JavaScript，您可以重构整个 HTML 文档。您可以添加、移除、改变或重排页面上的项目。</p>
+
+        </section>
+        <!--知识剖析-->
+        <section class="future" style="top: 267px; display: block;" hidden="" aria-hidden="true">
+            <h3>2.知识剖析</h3>
+            <section class="future" style="top: 267px; display: block;" hidden="" aria-hidden="true">
+                <p>节点是什么</p>
+                <p>节点这个词是一个网络用语，代表了网络中的一个连接点。一个网络就是由一些节点构成的集合。</p>
+                <p>在现实世界中，一切事物都由原子构成。原子就是现实世界的节点。但是原子同样还可以进一步分解为更细小的亚原子微粒。这些亚原子微粒同样也是节点。</p>
+            </section>
+
+            <section class="future" style="top: 267px; display: block;" hidden="" aria-hidden="true">
+                <p>DOM也是同样的情况。文档是由节点构成的集合，只不过此时的节点是文档树上的树枝和树叶而已。</p>
+                <p>在DOM中有许多不同类型的节点。就像原子包含着亚原子微粒那样，也有很多类型的DOM节点包含着其他类型的节点。接下来我们先看看其中的三种：元素节点、文本节点和属性节点。</p>
+            </section>
+        </section>
+
+        <section class="future" style="top: 267px; display: block;" hidden="" aria-hidden="true">
+            <section class="future" style="top: 267px; display: block;" hidden="" aria-hidden="true">
+                <p> 元素节点</p>
+                <p>在DOM中的原子就是元素节点。</p>
+                <p>像是我们现在所看到的这个网页，我们在编写时，会用到诸如 &#60body&#62、&#60head&#62、&#60p&#62这些元素。
+                    如果把Web上的文档比作一座大厦，那么元素就是建造这座大厦的砖块，这些元素在在文档中的布局形成了文档的结构。
+                    元素可以包含其他的元素，在我们所看到的页面页中，内容都被包含在在一个&#60section&#62元素的内部。
+                    而唯一没有被包含在其他元素中的唯一元素是'&#60html&#62'，他和我们的节点树的根元素，其他的所有元素都被包含在'&#60html&#62'中。</p>
+            </section>
+
+            <section class="future" style="top: 267px; display: block;" hidden="" aria-hidden="true">
+                <p>文本节点</p>
+                <p>元素节点只是节点类型的一种。如果一份文档完全由一些空白元素构成，他将有一个结构，但这份文档本身将不会包含什么内容。</p>
+                <p>在我们的ppt首页中，'&#60p&#62'元素包含着文本，'分享人'。他就是一个文本节点。在html文档里，文本节点总是被包含在元素节点的内部。</p>
+            </section>
+            <section class="future" style="top: 267px; display: block;" hidden="" aria-hidden="true">
+                <p>属性节点</p>
+                <p> 属性节点用来对元素做出更具体的描述。
+                    例如，几乎所有的元素都有一个title属性，
+                    而我们可以利用这个属性对包含在元素里的东西做出准确的描述：'&#60p title="显示内容"&#62这是一个带有温馨提示的p标签&#60/p&#62'</p>
+                <p>在DOM中，title="显示内容"是一个属性节点。因为属性总是被放在起始标签里，所以属性节点总是被包含在元素节点中。
+                    并非所有的标签都包含着属性，但是所有的属性都被元素包含。</p>
+            </section>
+
+            <section class="future" style="top: 267px; display: block;" hidden="" aria-hidden="true">
+                <p>常见的DOM操作</p>
+                <p>获取DOM</p>
+                <p>getElementById() 方法匹配元素的id属性来访问元素节点</p>
+                <p>getElementsByTagName() 方法匹配元素的标签名来访问元素节点</p>
+                <p>getElementsByClassName() 方法匹配元素的类名来访问元素节点</p>
+                <p>值得注意的是 getElementsByTagName() 和 getElementsByClassName() 这两种方法因为其访问的是节点中的可能为复数的属性，
+                所以得到的会是一个以数组的形式来体现出来的元素节点集合，我们可以通过打印获取到的DOM节点来判断类型</p>
+            </section>
+
+            <section class="future" style="top: 267px; display: block;" hidden="" aria-hidden="true">
+                <P>DOM事件</P>
+                <P> onclick事件---当用户点击时执行</P>
+                <P>onload事件---当用户进入时执行</P>
+                <P>onunload事件---用用户离开时执行</P>
+                <P>onmouseover事件---当用户鼠标指针移入时执行</P>
+                <P>onmouseout事件---当用户鼠标指针移出时执行</P>
+                <P>onmousedown事件---当用户鼠标摁下时执行</P>
+                <P>onmouseup事件---当用户鼠标松开时执行</P>
+            </section>
+        </section>
+
+        <!-- 字符	十进制	转义字符
+            "	&#34;	&quot;
+            &	&#38;	&amp;
+            <	&#60;	&lt;
+            >	&#62;	&gt;
+        不断开空格(non-breaking space)	&#160;	&nbsp;-->
+
+        <!--常见问题-->
+        <section class="future" style="top: 267px; display: block;" hidden="" aria-hidden="true">
+            <h3>3.常见问题</h3>
+            <p>如何通过class和tag调用元素?如何对其设置属性？</p>
+        </section>
+
+        <!--解决方案-->
+        <section class="future" style="top: 267px; display: block;" hidden="" aria-hidden="true">
+            <section class="future" style="top: 267px; display: block;" hidden="" aria-hidden="true">
+                <h3>4.解决方案</h3>
+                <p>在一个页面中常常有多个class相同的元素，也有多个标签相同的元素，在调用时方法如下</p>
+            </section>
+        </section>
+        <!--编码实战-->
+        <section class="future" style="top: 267px; display: block;" hidden="" aria-hidden="true">
+            <h3>5.编码实战</h3>
+        </section>
+        <!--扩展思考-->
+        <section class="future" style="top: 267px; display: block;" hidden="" aria-hidden="true">
+            <h3>6.扩展思考</h3>
+        </section>
+        <section class="future" style="top: 267px; display: block;" hidden="" aria-hidden="true">
+            <p>onblur事件---当对象失去焦点时发生</p>
+            <p>onchange事件---当对象域的值被改变时发生</p>
+            <p>button 事件---属性可返回一个整数，指示当事件被触发时哪个鼠标按键被点击。</p>
+        </section>
+        <!--参考文献-->
+        <section class="future" style="top: 267px; display: block;" hidden="" aria-hidden="true">
+            <h3>7.参考文献</h3>
+            <p>《JavaScript DOM编程艺术》</p>
+            <p>w3school</p>
+        </section>
+        <!--更多讨论-->
+        <section class="future" style="top: 267px; display: block;" hidden="" aria-hidden="true">
+            <h3>8.更多讨论</h3>
+        </section>
+        <section class="future" style="top: 267px; display: block;" hidden="" aria-hidden="true">
+        </section>
+        <!--鸣谢-->
+        <section class="future" style="top: 267px; display: block;" hidden="" aria-hidden="true">
+            <h4>鸣谢</h4>
+            <p>感谢大家观看</p>
+            <small>by: 张林骞</small>
+        </section>
+    </div>
+<div class="backgrounds">
+    <div class="slide-background past" data-loaded="true" style="display: none;"></div>
+    <div class="slide-background past" data-loaded="true" style="display: block;"></div>
+    <div class="slide-background past" data-loaded="true" style="display: block;"></div>
+    <div class="slide-background stack present" data-loaded="true" style="display: block;">
+        <div class="slide-background past" data-loaded="true" style="display: block;"></div>
+        <div class="slide-background present" data-loaded="true" style="display: block;"></div>
+    </div>
+    <div class="slide-background future" data-loaded="true" style="display: block;"></div>
+    <div class="slide-background future" data-loaded="true" style="display: block;"></div>
+    <div class="slide-background future" data-loaded="true" style="display: none;"></div>
+    <div class="slide-background future" data-loaded="true" style="display: none;"></div>
+    <div class="slide-background future" style="display: none;"></div>
+    <div class="slide-background stack future" style="display: none;">
+        <div class="slide-background present" style="display: none;"></div>
+    </div>
+    <div class="slide-background future" style="display: none;"></div>
+    <div class="slide-background stack future" style="display: none;">
+        <div class="slide-background present" style="display: none;"></div>
+    </div>
+    <div class="slide-background future" style="display: none;"></div>
+    <div class="slide-background stack future" style="display: none;">
+        <div class="slide-background present" style="display: none;"></div>
+    </div>
+    <div class="slide-background stack future" style="display: none;">
+        <div class="slide-background present" style="display: none;"></div>
+        <div class="slide-background future" style="display: none;"></div>
+        <div class="slide-background future" style="display: none;"></div>
+    </div>
+    <div class="slide-background future" style="display: none;"></div>
+    <div class="slide-background future" style="display: none;"></div>
+    <div class="slide-background future" style="display: none;"></div>
+    <div class="slide-background future" style="display: none;"></div>
+</div>
+<div class="progress" style="display: block;"><span style="width: 260.19px;"></span></div>
+<aside class="controls" style="display: block;">
+    <button class="navigate-left enabled" aria-label="previous slide"></button>
+    <button class="navigate-right enabled" aria-label="next slide"></button>
+    <button class="navigate-up enabled" aria-label="above slide"></button>
+    <button class="navigate-down" aria-label="below slide"></button></aside>
+<div class="slide-number" style="display: none;"></div>
+<div class="speaker-notes" data-prevent-swipe=""></div>
+<div class="pause-overlay"></div>
+<div id="aria-status-div" aria-live="polite" aria-atomic="true"
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);">
+    语法：
+    return[()[expression][]];
+    可选项 expression 参数是要从函数返回的值。如果省略，则该函数不返回值。
+    用 return 语句来终止一个函数的执行，并返回 expression 的值。如果 expression 被省略，
+    或在函数内没有 return 语句被执行，则把值 undefined 赋给调用当前函数的表达式。
+</div>
+</div>
+<script src="https://ptteng.github.io/PPT/lib/reveal/js/head.min.js"></script>
+<script src="https://ptteng.github.io/PPT/lib/reveal/reveal.js"></script>
+<script>
+    // 以下为常见配置属性的默认值
+    // {
+    //  controls: true, // 是否在右下角展示控制条
+    //  progress: true, // 是否显示演示的进度条
+    //  slideNumber: false, // 是否显示当前幻灯片的页数编号，也可以使用代码slideNumber: 'c / t' ，表示当前页/总页数。
+    //  history: false, // 是否将每个幻灯片改变加入到浏览器的历史记录中去
+    //  keyboard: true, // 是否启用键盘快捷键来导航
+    //  overview: true, // 是否启用幻灯片的概览模式，可使用"Esc"或"o"键来切换概览模式
+    //  center: true, // 是否将幻灯片垂直居中
+    //  touch: true, // 是否在触屏设备上启用触摸滑动切换
+    //  loop: false, // 是否循环演示
+    //  rtl: false, // 是否将演示的方向变成RTL，即从右往左
+    //  fragments: true, // 全局开启和关闭碎片。
+    //  autoSlide: 0, // 两个幻灯片之间自动切换的时间间隔（毫秒），当设置成 0 的时候则禁止自动切换，该值可以被幻灯片上的 ` data-autoslide` 属性覆盖
+    //  transition: 'default', // 切换过渡效果，有none/fade/slide/convex/concave/zoom
+    //  transitionSpeed: 'default', // 过渡速度，default/fast/slow
+    //  mouseWheel: true, //是否启用通过鼠标滚轮来切换幻灯片
+    // }
+
+    // 初始化幻灯片
+    Reveal.initialize({
+//        history: true,
+        transition: 'default',
+        transitionSpeed: 'slow',
+        dependencies: [
+            {src: '../plugin/markdown/marked.js'},
+            {src: '../plugin/markdown/markdown.js'},
+            {src: '../plugin/notes/notes.js', async: true},
+            {
+                src: '../plugin/highlight/highlight.js', async: true, callback: function () {
+                hljs.initHighlightingOnLoad();
+            }
+            }
+        ]
+    });
+    //    原始类型对象直接赋值不会相互影响
+    //    var a = 1;
+    //
+    //    var b = a;
+    //    b = 10;
+    //    console.log(a); // 1
+    //
+    //    var a = 'hello';
+    //    var b = a;
+    //    b = 'world';
+    //    console.log(a); // hello
+    //
+    //    var a = true;
+    //    var b = a;
+    //    b = false;
+    //    console.log(a);
+
+    //数组浅复制
+    //    var a = ['隔壁老王','冠希哥', '宋经理']; //定义一个名为a的属猪，里面有3个值，
+    //    var b = a;   //定义一个变量b，把a赋值给他，这样比、b和a一样了
+    //    b[2] = '冲冲老师'; //然后把b的第三个值等于冲冲老师
+    //    console.log(a)//那么现在打印a 是什么结果呢
+    //
+    //    var arr = ["One","Two","Three"];   //数组的深复制，slice方法
+    //    var arrtoo = arr.slice(1);
+    //    arrtoo[2] = "set Map";
+    //    console.log(arr);//One,Two,Three
+    //    console.log(arrtoo);//One,set Map,Three
+
+    //
+    //    var arr1 = ["One","Two","Three"]; //数组的深复制，concat 方法
+    //    var arrtooo = arr1.concat(111111);
+    //    arrtooo[1] = "set Map To";
+    //    console.log(arr1);//One,Two,Three
+    //    console.log(arrtooo);//One,set Map To,Three
+
+    //
+    //    var b=[1,2,3,4,5];   //concat的链接
+    //    var c=[6,7,8,9];
+    //    var d =[4,4,22]
+    //    console.log(b.concat(c,d))
+
+    var a = {name: 'yy', age: 26};  //对象的浅拷贝哦
+    var b = new Object();
+    b.name = a.name;
+    b.age = a.age;
+    b.name = 'xx';
+    console.log(a);//Object { name="yy", age=26}
+    console.log(b);//Object { name="xx", age=26}
+
+    var d = {            //对象的浅拷贝哦 第一种
+        name: 'd',
+        oc: {
+            age: 32
+        },
+        oad: {
+            adds: {
+                bb: 12
+            }
+        }
+    };
+    var deepCopy = function (source) {
+        var result = {};
+        for (var key in source) {
+            result[key] = typeof source[key] === 'object' ? deepCopy(source[key]) : source[key]
+        }
+        return result
+    };
+
+    var c = deepCopy(d);
+    c.name = 'c';
+    c.oc = {
+        age: 49
+    };
+    console.log(c);
+    console.log(d);
+
+
+    //    var person = {    //第二种深拷贝
+    //        name: 'aa',
+    //        friends: ['da', 'dsa', 'gf']
+    //    };
+    //
+    //    var aPerson = Object.create(person, {
+    ////        name: {
+    ////            value: "gee"
+    ////        }
+    //    });
+    //
+    //    console.log(person.name);
+    //    console.log(aPerson.friends)
+
+    var Chinese = {
+        nation: '中国'
+
+    }
+    var Doctor = {
+        career: '医生'
+    }
+
+    function extendCopy(p) {
+        var c = {};
+        for (var i in p) {
+            c[i] = p[i];
+        }
+        c.uber = p;
+        return c;
+    }
+
+    var Doctor = extendCopy(Chinese);
+        Doctor.career = '医生';
+        console.log(Doctor); // 中国
+        Chinese.birthPlaces = ['北京', '上海', '香港'];
+    var Doctor = extendCopy(Chinese);
+        Doctor.birthPlaces.push('厦门');
+
+</script>
+</body>
+</html>

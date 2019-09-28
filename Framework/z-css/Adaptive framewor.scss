@@ -1,0 +1,448 @@
+@import"component";
+@mixin header  {};//头*
+@mixin content {};//内容
+@mixin footer {};//尾
+@mixin nav {};//导航//
+@mixin subnav {};//子导航//
+@mixin tab {}//标签页//
+@mixin sidebar {};//侧栏//
+@mixin wrapper {};//页面外围控制整体布局宽度//
+@mixin left-right-center {};//左右中//
+@mixin logo {};//标志//
+@mixin main {};//主体//
+@mixin menu {};//菜单//
+/**/
+.mx-auto{
+    display: block;
+    margin: 0 auto;
+}
+/**容器**/
+/**宽度与页面相等**/
+.width-auto {
+    @include width-full;
+}
+/***固定宽度-自动居中**/
+.width-fixed {
+    @include width-fixed;
+    @media (min-width: 576px) {max-width: 540px};
+    @media (min-width: 768px) {max-width: 720px};
+    @media (min-width: 992px) {max-width: 960px};
+    @media (min-width: 1150px) {max-width: 1090px};
+    @media (min-width: 1280px) {max-width: 1200px};
+}
+/**行元素**/
+.row {
+    min-height: 1px;
+    margin-left: -15px;
+    margin-right: -15px;
+    @include wrap-flex;
+    box-sizing:border-box;
+}
+/******弹性盒子******/
+/*通用*/
+.col,.col-1,.col-2.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,
+.col-9,.col-10,.col-11,.col-12,.col-20,.col-10,.col-50,
+/*平板*/
+.col-pd-1,.col-pd-2.col-pd-3,.col-pd-4,.col-pd-5,.col-pd-6,
+.col-pd-7,.col-pd-8,.col-pd-9,.col-pd-10,.col-pd-11,
+.col-pd-12,.col-pd-20, .col-pd-50
+/*显示器*/
+.col-xsq-1,.col-xsq-2.col-xsq-3,.col-xsq-4,.col-xsq-5,.col-xsq-6,
+.col-xsq-7,.col-xsq-8,.col-xsq-9,.col-xsq-10,.col-xsq-11,
+.col-xsq-12,.col-xsq-20, .col-xsq-50
+/*大显示器*/
+.col-dxsq-1,.col-dxsq-2.col-dxsq-3,.col-dxsq-4,.col-dxsq-5,.col-dxsq-6,
+.col-dxsq-7,.col-dxsq-8,.col-dxsq-9,.col-dxsq-10,.col-dxsq-11,
+.col-dxsq-12,.col-dxsq-20, .col-dxsq-50
+/*超大显示器*/
+.col-cdxsq-1,.col-cdxsq-2.col-cdxsq-3,.col-cdxsq-4,.col-cdxsq-5,.col-cdxsq-6,
+.col-cdxsq-7,.col-cdxsq-8,.col-cdxsq-9,.col-cdxsq-10,.col-cdxsq-11,
+.col-cdxsq-12,.col-cdxsq-20, .col-cdxsq-50
+{   position: relative;  
+    min-height: 1px;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing:border-box;
+}
+/*X轴左对齐-y轴居中-默认换行*/
+.warp-flex {@include wrap-flex;}
+
+/*X轴左对齐-y轴居中-不换行*/
+.no-flex {@include no-flex;}
+
+           /*主轴方向 */
+/*水平-起点在-左*/
+.flex-direction-row { @include fdn(row);}
+/*水平-起点在-右*/
+.flex-direction-row-reverse { @include fdn(row-reverse);}
+/*起点在上*/
+.flex-direction-column {@include fdn(column);}
+/*起点在下*/
+.flex-direction-column-reverse {@include fdn(column-reverse);}
+
+            /*换行属性*/
+/*不换行*/
+.flex-nowrap {@include f-p(nowrap)}
+/*换行-第一行在上*/
+.flex-wrap {@include f-p(wrap)}
+/*换行-第一行在下*/
+.flex-wrap-r {@include f-p(wrap-reverse)}
+
+        /*主轴上项目对齐方式*/
+/*起点对齐-默认*/
+.ju-c-start {@include ju-c(flex-start)}
+/*终点对齐*/
+.ju-c-end {@include ju-c(flex-end)}
+/*居中*/
+.ju-c-center {@include ju-c(center)}
+/*两端对齐  紧贴父元素*/
+.ju-c-between {@include ju-c(space-between)}
+/*项目两侧距离相对*/
+.ju-c-around {@include ju-c(space-around)}
+
+        /*交叉轴上项目对齐方式*/
+/*起点*/
+.align-items-start {@include a-s(flex-start)}
+/*终点*/
+.align-items-end {@include a-s(flex-end)}
+/*居中*/
+.align-items-center {@include a-s(center)}
+/*第一行文字基线对齐*/
+.align-items-baseline {@include a-s(baseline)}
+/*高度为auto  自动占满整个交叉轴-默认*/
+.align-items-stretch {@include a-s(stretch)}
+
+        /*多轴对齐方式线*/
+/*交叉轴起点对齐*/
+.aling-content-start{@include a-t(flex-start)}
+/*交叉轴终点对齐*/
+.aling-content-end{@include a-t(flex-end)}
+/*交叉轴中点对齐*/
+.aling-content-center{@include a-t(center)}
+/*与交叉轴两端对齐  轴线间隔平均分布*/
+.aling-content-between{@include a-t(space-between)}
+/*轴线两边距离相等*/
+.aling-content-around{@include a-t(space-around)}
+/*占满交叉轴*/
+.aling-content-stretch{@include a-t(stretch)}
+/*****子项目属性******/
+/***占用剩余空间**/
+.flex-full {
+    @include flex-item(1,1);
+}
+
+        /*通用自适应*/
+
+.col {
+    max-width: 100%;
+    @include flex-item(auto);
+}
+.col-1 { 
+    max-width: 8.333333%;
+    @include flex-item(0, 0, 8.333333%);}
+
+.col-2 { 
+    max-width: 16.666666%;
+    @include flex-item(0, 0, 16.666666%);}
+
+.col-3 { 
+    max-width: 25%;
+    @include flex-item(0, 0, 25%);}
+
+.col-4 { 
+    max-width: 33.333333%;
+    @include flex-item(0, 0, 33.333333%);}
+
+.col-5 { 
+    max-width: 41.666666%;
+    @include flex-item(0, 0, 41.666666%);}
+
+.col-6 { 
+    max-width: 50%;
+    @include flex-item(0, 0, 50%);}
+
+.col-7 { 
+    max-width: 58.333333%;
+    @include flex-item(0, 0, 58.333333%);}
+
+.col-8 { 
+    max-width: 66.666666%;
+    @include flex-item(0, 0, 66.666666%);}
+
+.col-9 { 
+    max-width: 75%;
+    @include flex-item(0, 0, 75%);}
+
+.col-10 { 
+    max-width: 83.333333%;
+    @include flex-item(0, 0, 83.333333%);}
+
+.col-11 { 
+    max-width: 91.666666%;
+    @include flex-item(0, 0, 91.666666%);}
+
+.col-12 { 
+    max-width: 100%;
+    @include flex-item(0, 0, 100%);}
+
+/**五分之一**/
+.col-20 { 
+    max-width: 20%;
+    @include flex-item(0, 0, 20%);}
+/***十分之一****/
+.col-50 { 
+    max-width: 10%;
+    @include flex-item(0, 0, 10%);}
+
+/****平板**适应***/
+
+@media (min-width: 576px) {
+    
+    .col-pd-1 { 
+        max-width: 8.333333%;
+        @include flex-item(0, 0, 8.333333%);}
+    
+    .col-pd-2 { 
+        max-width: 16.666666%;
+        @include flex-item(0, 0, 16.666666%);}
+    
+    .col-pd-3 { 
+        max-width: 25%;
+        @include flex-item(0, 0, 25%);}
+    
+    .col-pd-4 { 
+        max-width: 33.333333%;
+        @include flex-item(0, 0, 33.333333%);}
+    
+    .col-pd-5 { 
+        max-width: 41.666666%;
+        @include flex-item(0, 0, 41.666666%);}
+    
+    .col-pd-6 { 
+        max-width: 50%;
+        @include flex-item(0, 0, 50%);}
+    
+    .col-pd-7 { 
+        max-width: 58.333333%;
+        @include flex-item(0, 0, 58.333333%);}
+    
+    .col-pd-8 { 
+        max-width: 66.666666%;
+        @include flex-item(0, 0, 66.666666%);}
+    
+    .col-pd-9 { 
+        max-width: 75%;
+        @include flex-item(0, 0, 75%);}
+    
+    .col-pd-10 { 
+        max-width: 83.333333%;
+        @include flex-item(0, 0, 83.333333%);}
+    
+    .col-pd-11 { 
+        max-width: 91.666666%;
+        @include flex-item(0, 0, 91.666666%);}
+    
+    .col-pd-12 { 
+        max-width: 100%;
+        @include flex-item(0, 0, 100%);}
+    
+    /**五分之一**/
+    .col-pd-20 { 
+        max-width: 20%;
+        @include flex-item(0, 0, 20%);}
+    /**十分之一**/
+    .col-pd-50 { 
+        max-width: 10%;
+        @include flex-item(0, 0, 10%);}
+
+}
+/******小显示器*******/
+
+@media (min-width: 768px) {
+    .col-xsq-1 { 
+        max-width: 8.333333%;
+        @include flex-item(0, 0, 8.333333%);}
+    
+    .col-xsq-2 { 
+        max-width: 16.666666%;
+        @include flex-item(0, 0, 16.666666%);}
+    
+    .col-xsq-3 { 
+        max-width: 25%;
+        @include flex-item(0, 0, 25%);}
+    
+    .col-xsq-4 { 
+        max-width: 33.333333%;
+        @include flex-item(0, 0, 33.333333%);}
+    
+    .col-xsq-5 { 
+        max-width: 41.666666%;
+        @include flex-item(0, 0, 41.666666%);}
+    
+    .col-xsq-6 { 
+        max-width: 50%;
+        @include flex-item(0, 0, 50%);}
+    
+    .col-xsq-7 { 
+        max-width: 58.333333%;
+        @include flex-item(0, 0, 58.333333%);}
+    
+    .col-xsq-8 { 
+        max-width: 66.666666%;
+        @include flex-item(0, 0, 66.666666%);}
+    
+    .col-xsq-9 { 
+        max-width: 75%;
+        @include flex-item(0, 0, 75%);}
+    
+    .col-xsq-10 { 
+        max-width: 83.333333%;
+        @include flex-item(0, 0, 83.333333%);}
+    
+    .col-xsq-11 { 
+        max-width: 91.666666%;
+        @include flex-item(0, 0, 91.666666%);}
+    
+    .col-xsq-12 { 
+        max-width: 100%;
+        @include flex-item(0, 0, 100%);}
+    
+    /**五分之一**/
+    .col-xsq-20 { 
+        max-width: 20%;
+        @include flex-item(0, 0, 20%);}
+    /**十分之一**/
+    .col-xsq-50 { 
+        max-width: 10%;
+        @include flex-item(0, 0, 10%);}
+
+}
+
+/******大显示器******/
+
+@media (min-width: 992px) {
+    .col-dxsq-1 { 
+        max-width: 8.333333%;
+        @include flex-item(0, 0, 8.333333%);}
+    
+    .col-dxsq-2 { 
+        max-width: 16.666666%;
+        @include flex-item(0, 0, 16.666666%);}
+    
+    .col-dxsq-3 { 
+        max-width: 25%;
+        @include flex-item(0, 0, 25%);}
+    
+    .col-dxsq-4 { 
+        max-width: 33.333333%;
+        @include flex-item(0, 0, 33.333333%);}
+    
+    .col-dxsq-5 { 
+        max-width: 41.666666%;
+        @include flex-item(0, 0, 41.666666%);}
+    
+    .col-dxsq-6 { 
+        max-width: 50%;
+        @include flex-item(0, 0, 50%);}
+    
+    .col-dxsq-7 { 
+        max-width: 58.333333%;
+        @include flex-item(0, 0, 58.333333%);}
+    
+    .col-dxsq-8 { 
+        max-width: 66.666666%;
+        @include flex-item(0, 0, 66.666666%);}
+    
+    .col-dxsq-9 { 
+        max-width: 75%;
+        @include flex-item(0, 0, 75%);}
+    
+    .col-dxsq-10 { 
+        max-width: 83.333333%;
+        @include flex-item(0, 0, 83.333333%);}
+    
+    .col-dxsq-11 { 
+        max-width: 91.666666%;
+        @include flex-item(0, 0, 91.666666%);}
+    
+    .col-dxsq-12 { 
+        max-width: 100%;
+        @include flex-item(0, 0, 100%);}
+    
+    /**五分之一**/
+    .col-dxsq-20 { 
+        max-width: 20%;
+        @include flex-item(0, 0, 20%);}
+    /**十分之一**/
+    .col-dxsq-50 { 
+        max-width: 10%;
+        @include flex-item(0, 0, 10%);}
+
+}
+
+/*****超大显示器******/
+
+@media (min-width: 1200px) {
+    .col-cdxsq-1 { 
+        max-width: 8.333333%;
+        @include flex-item(0, 0, 8.333333%);}
+    
+    .col-cdxsq-2 { 
+        max-width: 16.666666%;
+        @include flex-item(0, 0, 16.666666%);}
+    
+    .col-cdxsq-3 { 
+        max-width: 25%;
+        @include flex-item(0, 0, 25%);}
+    
+    .col-cdxsq-4 { 
+        max-width: 33.333333%;
+        @include flex-item(0, 0, 33.333333%);}
+    
+    .col-cdxsq-5 { 
+        max-width: 41.666666%;
+        @include flex-item(0, 0, 41.666666%);}
+    
+    .col-cdxsq-6 { 
+        max-width: 50%;
+        @include flex-item(0, 0, 50%);}
+    
+    .col-cdxsq-7 { 
+        max-width: 58.333333%;
+        @include flex-item(0, 0, 58.333333%);}
+    
+    .col-cdxsq-8 { 
+        max-width: 66.666666%;
+        @include flex-item(0, 0, 66.666666%);}
+    
+    .col-cdxsq-9 { 
+        max-width: 75%;
+        @include flex-item(0, 0, 75%);}
+    
+    .col-cdxsq-10 { 
+        max-width: 83.333333%;
+        @include flex-item(0, 0, 83.333333%);}
+    
+    .col-cdxsq-11 { 
+        max-width: 91.666666%;
+        @include flex-item(0, 0, 91.666666%);}
+    
+    .col-cdxsq-12 { 
+        max-width: 100%;
+        @include flex-item(0, 0, 100%);}
+    
+    /**五分之一**/
+    .col-cdxsq-20 { 
+        max-width: 20%;
+        @include flex-item(0, 0, 20%);}
+    /**十分之一**/
+    .col-cdxsq-50 { 
+        max-width: 10%;
+        @include flex-item(0, 0, 10%);}
+
+}
+
+
+
+
